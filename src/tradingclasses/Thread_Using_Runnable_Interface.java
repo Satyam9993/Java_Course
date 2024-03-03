@@ -18,7 +18,8 @@ class MyThreadRunnable2 implements Runnable {
 public class Thread_Using_Runnable_Interface {
     public static void main(String[] args) {
         MyThreadRunnable1 t1 = new MyThreadRunnable1();
-        Thread t11 = new Thread(t1);
+        Thread t11 = new Thread(t1, "This is Name");
+        System.out.println(t11.getName());
         MyThreadRunnable2 t2 = new MyThreadRunnable2();
         Thread t22 = new Thread(t2);
         t11.start();
